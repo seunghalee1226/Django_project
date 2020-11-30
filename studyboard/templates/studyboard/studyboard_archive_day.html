@@ -1,0 +1,10 @@
+<h1>studyboard Archives for {{ day|date:"N d,Y" }}</h1>
+
+<div>
+    <ul>
+        {% for studyboard in object_list %}
+        <li>{{ studyboard.modify_dt|date:"Y-m-d" }}&nbsp;&nbsp;&nbsp;
+        <a href="{{ studyboard.get_absolute_url }}"><strong>{{ studyboard.title }}</strong></a></li>
+        {% endfor %}
+    </ul>
+</div>

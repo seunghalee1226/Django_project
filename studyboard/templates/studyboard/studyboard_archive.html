@@ -1,0 +1,19 @@
+<h1>studyboard Archives until {% now "N d, Y" %}</h1>
+<ul>
+    {% for date in date_list %}
+        <li style="display: inline;">
+            <a href="{% url 'studyboard:post_year_archive' date|date:'Y' %}">
+                {{ date|date:"Y" }}</a></li>
+    {% endfor %}
+</ul>
+
+<br/>
+
+<div>
+    <ul>
+        {% for studyboard in object_list %}
+        <li>{{ studyboard.modify_dt|date:"Y-m-d" }}&nbsp;&nbsp;&nbsp;
+        <a href="{{ studyboard.get_absolute_url }}"><strong>{{ studyboard.title }}</strong></a></li>
+        {% endfor %}
+    </ul>
+</div>
