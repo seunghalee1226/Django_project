@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
 from userlist.views import UserlistLV, UserlistDV
+
 
 app_name = 'userlist'
 
