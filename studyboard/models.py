@@ -4,6 +4,7 @@ import uuid
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
+from taggit.managers import TaggableManager
 
 
 class Studyboard(models.Model):
@@ -15,6 +16,7 @@ class Studyboard(models.Model):
     create_dt = models.DateTimeField('CREATE DATE', auto_now_add=True)
     modify_dt = models.DateTimeField('MODIFY DATE', auto_now = True)
     is_active = models.BooleanField(default=False)
+    tags = TaggableManager(blank=True)
 
     class Meta:
         verbose_name = 'studyboard'
