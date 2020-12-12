@@ -9,7 +9,7 @@
 
 {% for date in date_list %}
     <li style="display: inline;">
-        <a href="{% url 'studyboard:post_month_archive' year|date:'Y' date|date:'m' %}"
+        <a href="{% url 'studyboard:studyboard_month_archive' year|date:'Y' date|date:'m' %}"
         class="btn btn-outline-primary btn-sm mx-1">{{ date|date:"F" }}</a>
 {% endfor %}
 

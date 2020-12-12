@@ -7,7 +7,7 @@
 <h1>studyboard Archives until {% now "N d, Y" %}</h1>
 
 {% for date in date_list %}
-<a href="{% url 'studyboard:post_year_archive' date|date:'Y' %}"
+<a href="{% url 'studyboard:studyboard_year_archive' date|date:'Y' %}"
 class="btn btn-outline-primary btn-sm mx-1">Year-{{ date|date:"Y" }}</a>
 {% endfor %}
 

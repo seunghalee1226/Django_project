@@ -25,10 +25,10 @@ urlpatterns = [
     path('', views.PostLV.as_view(), name='index'),
 
     # /studyboard/post/
-    path('post/', views.PostLV.as_view(), name='studyboard_list'),
+    path('studyboard/', views.PostLV.as_view(), name='studyboard_list'),
 
     # /studyboard/post/django-example.
-    re_path(r'^post/(?P<slug>[-\w]+)/$', views.PostDV.as_view(), name='studyboard_detail'),
+    re_path(r'^studyboard/(?P<slug>[-\w]+)/$', views.PostDV.as_view(), name='studyboard_detail'),
 
     # /studyboard/archive
     path('archive/', views.PostAV.as_view(), name='studyboard_archive'),
