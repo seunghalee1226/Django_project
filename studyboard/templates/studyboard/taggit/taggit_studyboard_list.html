@@ -4,11 +4,11 @@
 
 {% block content %}
 
-<h1>Posts for tag - {{ tagname }}</h1>
+<h1>Studyboard for tag - {{ tagname }}</h1>
 
 <br>
 
-{% for post in object_list %}
+{% for studyboard in object_list %}
 <h2><a href='{{ studyboard.get_absolute_url }}'>{{ studyboard.title }}</a></h2>
 {{ studyboard.modify_dt|date:"N d, Y" }}
 <p>{{ studyboard.description }}</p>

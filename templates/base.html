@@ -29,14 +29,12 @@
       <li class="nav-item mx-1 btn btn-primary">
         <a class="nav-link text-white" href="{% url 'studyboard:index' %}">Studyboard</a></li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
-          Util
-        </a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Util</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{% url 'admin:index' %}">Admin</a>
           <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="{% url 'studyboard:studyboard_archive' %}">Archive</a>
-          <a class="dropdown-item" href="">Search</a>
+          <a class="dropdown-item" href="{% url 'studyboard:studyboard_archive' %}">Archive</a>
+          <a class="dropdown-item" href="{% url 'studyboard:search' %}">Search</a>
         </div>
       </li>
     </ul>
